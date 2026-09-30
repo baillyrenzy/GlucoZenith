@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#DC3545',
+                            darkred: '#C82333',
+                            deepred: '#900C3F',
+                            lightbg: '#FFF8F8',
+                            softpink: '#FFEAEA',
+                            border: '#FFD1D1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .page-view { display: none; }
+        .page-view.active { display: block; animation: fadeIn 0.35s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .cta-btn-pulse {
+            animation: pulse-glow 2s infinite;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.6); }
+            70% { box-shadow: 0 0 0 12px rgba(220, 53, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-deepred text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-inner">
+        <span class="inline-block bg-brand-red text-white text-xs px-2 py-0.5 rounded font-bold uppercase tracking-wider mr-2">Special Offer</span>
+        Claim Up To 50% OFF + Free USA Shipping Today On Select Packages!
+    </div>
+
+    <!-- Sticky Main Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo Branding -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchTab('home')">
+                    <!-- Custom SVG Bottle/Drop Icon matching GlucoZenith Logo -->
+                    <div class="w-11 h-11 bg-gradient-to-br from-brand-red to-brand-deepred rounded-full flex items-center justify-center shadow-md">
+                        <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0zM12 18a4 4 0 0 0 4-4c0-1.5-1-3-2.5-4.5S12 7 12 7s-1.5 1-2.5 2.5S8 12.5 8 14a4 4 0 0 0 4 4z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                            Gluco<span class="text-brand-red">Zenith</span>
+                        </div>
+                        <span class="text-[10px] text-slate-500 tracking-widest uppercase font-semibold">By NutraVibe</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <button id="nav-home" onclick="switchTab('home')" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-brand-red bg-brand-softpink">
+                        Home
+                    </button>
+                    <button id="nav-how" onclick="switchTab('how')" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-brand-red hover:bg-slate-100 transition">
+                        How It Works
+                    </button>
+                    <button id="nav-ingredients" onclick="switchTab('ingredients')" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-brand-red hover:bg-slate-100 transition">
+                        Ingredients
+                    </button>
+                    <button id="nav-pricing" onclick="switchTab('pricing')" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-brand-red hover:bg-slate-100 transition">
+                        Pricing & Bundles
+                    </button>
+                    <button id="nav-faq" onclick="switchTab('faq')" class="nav-link px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-brand-red hover:bg-slate-100 transition">
+                        FAQ & Contact
+                    </button>
+                </nav>
+
+                <!-- Desktop Header CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="https://taptobuynow.com/glucozenith/" 
+                       title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="cta-btn-pulse inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-darkred hover:to-brand-deepred shadow-md transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid font-black fa-cart-shopping mr-2"></i> Order Now
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Toggle -->
+                <div class="flex md:hidden">
+                    <button onclick="toggleMobileMenu()" type="button" class="text-slate-700 hover:text-brand-red p-2 rounded-md focus:outline-none">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2">
+            <button onclick="switchTab('home'); toggleMobileMenu();" class="block w-full text-left px-4 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-softpink hover:text-brand-red">Home</button>
+            <button onclick="switchTab('how'); toggleMobileMenu();" class="block w-full text-left px-4 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-softpink hover:text-brand-red">How It Works & Benefits</button>
+            <button onclick="switchTab('ingredients'); toggleMobileMenu();" class="block w-full text-left px-4 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-softpink hover:text-brand-red">Ingredients & Quality</button>
+            <button onclick="switchTab('pricing'); toggleMobileMenu();" class="block w-full text-left px-4 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-softpink hover:text-brand-red">Pricing & Packages</button>
+            <button onclick="switchTab('faq'); toggleMobileMenu();" class="block w-full text-left px-4 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-brand-softpink hover:text-brand-red">FAQ & Support</button>
+            <a href="https://taptobuynow.com/glucozenith/" 
+               title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+               target="_blank" 
+               rel="noopener" 
+               class="block text-center mt-3 w-full px-5 py-3 rounded-lg text-base font-bold text-white bg-brand-red shadow-md">
+                Claim Offer Now <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER FOR 5 VIEWS -->
+    <main class="flex-grow">
+
+        <!-- PAGE 1: HOME / OVERVIEW VIEW -->
+        <section id="view-home" class="page-view active">
+            
+            <!-- Hero Banner Section -->
+            <div class="relative bg-gradient-to-b from-brand-lightbg via-white to-slate-50 py-12 md:py-20 overflow-hidden border-b border-brand-border/40">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        
+                        <!-- Left Hero Copy -->
+                        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                            <div class="inline-flex items-center space-x-2 bg-brand-softpink border border-brand-border rounded-full px-4 py-1.5 text-brand-darkred text-xs sm:text-sm font-bold shadow-sm">
+                                <i class="fa-solid fa-shield-halved text-brand-red"></i>
+                                <span>Advanced Daily Blood Sugar Support</span>
+                            </div>
+                            
+                            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                                GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness
+                            </h1>
+                            
+                            <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                                Maintain natural glucose balance, boost daily vitality, and protect your metabolic system with <strong>NutraVibe’s</strong> premium 60-capsule natural daily supplement.
+                            </p>
+
+                            <!-- Key Highlights Bullet Checklist -->
+                            <div class="grid grid-cols-2 sm:grid-cols-2 gap-3 max-w-xl mx-auto lg:mx-0 text-left pt-2">
+                                <div class="flex items-center space-x-2 bg-white p-3 rounded-lg shadow-sm border border-slate-100">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                    <span class="text-xs sm:text-sm font-semibold text-slate-800">Natural Ingredients</span>
+                                </div>
+                                <div class="flex items-center space-x-2 bg-white p-3 rounded-lg shadow-sm border border-slate-100">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                    <span class="text-xs sm:text-sm font-semibold text-slate-800">Safe & Effective Formula</span>
+                                </div>
+                                <div class="flex items-center space-x-2 bg-white p-3 rounded-lg shadow-sm border border-slate-100">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                    <span class="text-xs sm:text-sm font-semibold text-slate-800">No Artificial Colors/Flavors</span>
+                                </div>
+                                <div class="flex items-center space-x-2 bg-white p-3 rounded-lg shadow-sm border border-slate-100">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                    <span class="text-xs sm:text-sm font-semibold text-slate-800">Wellness You Can Trust</span>
+                                </div>
+                            </div>
+
+                            <!-- Hero CTA Section -->
+                            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                                <a href="https://taptobuynow.com/glucozenith/" 
+                                   title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="cta-btn-pulse w-full sm:w-auto px-8 py-4 rounded-xl text-lg font-black text-white bg-gradient-to-r from-brand-red via-brand-darkred to-brand-deepred hover:scale-105 transition transform shadow-xl text-center">
+                                    <i class="fa-solid fa-cart-shopping mr-2"></i> Claim Your Discounted Bottle Now
+                                </a>
+                                <span class="text-xs text-slate-500 font-medium flex items-center">
+                                    <i class="fa-solid fa-truck-fast text-brand-red mr-1"></i> Fast USA Shipping
+                                </span>
+                            </div>
+
+                            <!-- Trust Badges -->
+                            <div class="pt-2 flex items-center justify-center lg:justify-start space-x-6 text-slate-400 text-2xl">
+                                <span title="GMP Certified" class="flex items-center text-xs font-bold text-slate-600 bg-white px-3 py-1.5 rounded border border-slate-200">
+                                    <i class="fa-solid fa-award text-amber-500 mr-1.5 text-base"></i> GMP Quality
+                                </span>
+                                <span title="Non GMO" class="flex items-center text-xs font-bold text-slate-600 bg-white px-3 py-1.5 rounded border border-slate-200">
+                                    <i class="fa-solid fa-leaf text-emerald-500 mr-1.5 text-base"></i> 100% Non-GMO
+                                </span>
+                                <span title="Made in USA" class="flex items-center text-xs font-bold text-slate-600 bg-white px-3 py-1.5 rounded border border-slate-200">
+                                    <i class="fa-solid fa-flag-usa text-blue-600 mr-1.5 text-base"></i> USA Made
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Right Bottle Graphic Card -->
+                        <div class="lg:col-span-5 flex justify-center">
+                            <div class="relative w-full max-w-sm bg-gradient-to-b from-white to-brand-softpink/40 p-6 rounded-3xl border border-brand-border shadow-2xl text-center">
+                                <div class="absolute -top-4 right-4 bg-brand-red text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow">
+                                    NutraVibe Original
+                                </div>
+
+                                <!-- SVG / Graphic Bottle Illustration mirroring NutraVibe GlucoZenith -->
+                                <div class="my-6 mx-auto w-56 h-80 bg-white rounded-3xl border-4 border-slate-100 shadow-xl flex flex-col justify-between p-3 relative overflow-hidden">
+                                    <!-- Cap -->
+                                    <div class="h-10 bg-gradient-to-r from-brand-darkred via-brand-red to-brand-darkred rounded-t-xl border-b-2 border-brand-deepred flex items-center justify-center">
+                                        <div class="w-full h-1 bg-white/20"></div>
+                                    </div>
+                                    <!-- Label Content -->
+                                    <div class="flex-grow flex flex-col justify-around items-center py-2 px-1">
+                                        <div class="w-12 h-12 rounded-full bg-brand-softpink flex items-center justify-center">
+                                            <svg class="w-8 h-8 text-brand-red" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="text-center">
+                                            <h2 class="text-2xl font-black text-slate-900 tracking-tight">Gluco<span class="text-brand-red">Zenith</span></h2>
+                                            <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">By NutraVibe</p>
+                                        </div>
+                                        <div class="w-full border-t border-b border-brand-border py-1 text-center">
+                                            <p class="text-[10px] font-extrabold text-brand-darkred uppercase">60 CAPSULES</p>
+                                            <p class="text-[8px] font-semibold text-slate-600">DIETARY SUPPLEMENT</p>
+                                        </div>
+                                    </div>
+                                    <!-- Bottom red accent -->
+                                    <div class="h-3 bg-brand-red rounded-b-xl"></div>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <h3 class="text-xl font-bold text-slate-900">GlucoZenith (1 Bottle)</h3>
+                                    <p class="text-xs text-slate-500">60 Dietary Supplement Capsules | 30 Day Supply</p>
+                                    <p class="text-2xl font-black text-brand-red pt-1">$69.00 <span class="text-xs text-slate-400 line-through">$99.00</span></p>
+                                </div>
+
+                                <a href="https://taptobuynow.com/glucozenith/" 
+                                   title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="mt-4 block w-full py-3 rounded-xl font-extrabold text-white bg-brand-red hover:bg-brand-darkred transition shadow-md">
+                                    Get Started Today
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Features & Benefits Grid -->
+            <div class="py-16 bg-white border-b border-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                            Why Choose GlucoZenith Daily Formula?
+                        </h2>
+                        <p class="mt-3 text-lg text-slate-600">
+                            Engineered for individuals seeking a natural, steady way to promote balanced glucose levels, sustained energy, and metabolic wellness.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-lg transition">
+                            <div class="w-12 h-12 bg-brand-softpink text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Blood Sugar Balance</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Helps maintain healthy blood sugar ranges within normal levels after meals and throughout the day.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-lg transition">
+                            <div class="w-12 h-12 bg-brand-softpink text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Natural Energy Boost</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Avoid afternoon slumps by aiding efficient glucose transformation into clean cellular energy.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-lg transition">
+                            <div class="w-12 h-12 bg-brand-softpink text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-fire-burner"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Metabolic Wellness</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Supports metabolic efficiency, carbohydrate processing, and overall vital organ health.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 hover:shadow-lg transition">
+                            <div class="w-12 h-12 bg-brand-softpink text-brand-red rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">100% Pure Botanical</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Crafted without synthetic additives, harsh chemicals, gluten, or artificial colorants.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Callout Link to Page 2 -->
+                    <div class="mt-12 text-center">
+                        <button onclick="switchTab('how')" class="inline-flex items-center text-brand-red font-bold hover:text-brand-darkred text-base">
+                            Learn more about how GlucoZenith works <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PAGE 2: HOW IT WORKS & BENEFITS VIEW -->
+        <section id="view-how" class="page-view">
+            <div class="py-12 md:py-16 bg-brand-lightbg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-red bg-brand-softpink px-3 py-1 rounded-full">SIMPLE STEPS • BETTER YOU</span>
+                        <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">How It Works & Core Benefits</h1>
+                        <p class="text-slate-600 mt-2 text-lg">Your daily wellness made simple with standard dosage and natural support.</p>
+                    </div>
+
+                    <!-- 3-Step Process Matching Packaging Instructions -->
+                    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-brand-border shadow-xl mb-16">
+                        <h2 class="text-2xl font-bold text-slate-900 text-center mb-10">3 Easy Steps To Daily Metabolic Harmony</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                            <!-- Step 1 -->
+                            <div class="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl border border-slate-100 relative">
+                                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center font-black text-xl mb-4 shadow">
+                                    1
+                                </div>
+                                <div class="w-16 h-16 bg-brand-softpink text-brand-red rounded-full flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-capsules"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Take 2 Capsules Daily</h3>
+                                <p class="text-slate-600 text-sm">
+                                    Just 2 capsules a day with water, preferably after meals, to jumpstart your daily metabolic routine.
+                                </p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl border border-slate-100 relative">
+                                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center font-black text-xl mb-4 shadow">
+                                    2
+                                </div>
+                                <div class="w-16 h-16 bg-brand-softpink text-brand-red rounded-full flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Supports Healthy Blood Sugar</h3>
+                                <p class="text-slate-600 text-sm">
+                                    Helps your body maintain balanced glucose levels naturally through active bio-compounds.
+                                </p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="flex flex-col items-center text-center p-6 bg-slate-50 rounded-2xl border border-slate-100 relative">
+                                <div class="w-12 h-12 bg-brand-red text-white rounded-full flex items-center justify-center font-black text-xl mb-4 shadow">
+                                    3
+                                </div>
+                                <div class="w-16 h-16 bg-brand-softpink text-brand-red rounded-full flex items-center justify-center text-2xl mb-4">
+                                    <i class="fa-solid fa-face-smile"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Feel Better, Live Healthier</h3>
+                                <p class="text-slate-600 text-sm">
+                                    More energy, better focus, and overall wellness — every single day.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Benefits Cards Section -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex space-x-5">
+                            <div class="flex-shrink-0 w-14 h-14 bg-brand-softpink rounded-2xl flex items-center justify-center text-brand-red text-2xl">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Glucose Level Stabilization</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    GlucoZenith works alongside a balanced diet to prevent sudden glucose spikes and crashes, helping you stay level-headed and energetic.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex space-x-5">
+                            <div class="flex-shrink-0 w-14 h-14 bg-brand-softpink rounded-2xl flex items-center justify-center text-brand-red text-2xl">
+                                <i class="fa-solid fa-cookie-bite"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Reduced Sugar Cravings</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Natural botanicals like Gymnema Sylvestre help curb unhealthy sweet tooth cravings, making standard weight management significantly easier.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex space-x-5">
+                            <div class="flex-shrink-0 w-14 h-14 bg-brand-softpink rounded-2xl flex items-center justify-center text-brand-red text-2xl">
+                                <i class="fa-solid fa-battery-full"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">All-Day Mental & Physical Energy</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    By assisting cellular glucose uptake, GlucoZenith fuels your muscle tissue and brain cells for smooth, jitter-free endurance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex space-x-5">
+                            <div class="flex-shrink-0 w-14 h-14 bg-brand-softpink rounded-2xl flex items-center justify-center text-brand-red text-2xl">
+                                <i class="fa-solid fa-shield-virus"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Antioxidant & Cardiovascular Defense</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">
+                                    Rich in natural polyphenols that protect blood vessels against oxidative stress and support healthy circulatory flow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Banner on Benefits page -->
+                    <div class="mt-12 text-center bg-gradient-to-r from-brand-red via-brand-darkred to-brand-deepred p-8 rounded-3xl text-white shadow-xl">
+                        <h3 class="text-2xl font-black mb-3">Ready To Support Your Health Daily?</h3>
+                        <p class="text-brand-softpink text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                            Take control of your daily vitality with NutraVibe's premium GlucoZenith formula.
+                        </p>
+                        <a href="https://taptobuynow.com/glucozenith/" 
+                           title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="inline-block px-8 py-4 bg-white text-brand-darkred hover:bg-slate-100 font-extrabold rounded-xl shadow-lg transition transform hover:scale-105">
+                            Order GlucoZenith Now <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: INGREDIENTS & QUALITY GUARANTEE VIEW -->
+        <section id="view-ingredients" class="page-view">
+            <div class="py-12 md:py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-red bg-brand-softpink px-3 py-1 rounded-full">100% PURE & TESTED</span>
+                        <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">Premium Ingredients & Quality Standard</h1>
+                        <p class="text-slate-600 mt-2 text-lg">Formulated with clinically-backed botanical extracts and essential bio-minerals.</p>
+                    </div>
+
+                    <!-- Interactive Ingredient Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                        
+                        <!-- Ingredient 1 -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-brand-red/50 transition shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-plant-wilt"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900">Berberine HCL</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Known for activating the metabolic master switch enzyme (AMPK), helping body cells absorb glucose effectively.
+                            </p>
+                        </div>
+
+                        <!-- Ingredient 2 -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-brand-red/50 transition shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-cubes-stacked"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900">Cinnamon Bark Extract</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Supports natural insulin sensitivity and helps slow down carbohydrate breakdown in the digestive tract.
+                            </p>
+                        </div>
+
+                        <!-- Ingredient 3 -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-brand-red/50 transition shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-atom"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900">Chromium Picolinate</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                An essential trace mineral vital for lipid and carbohydrate metabolism, aiding cellular sugar absorption.
+                            </p>
+                        </div>
+
+                        <!-- Ingredient 4 -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-brand-red/50 transition shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-lg flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-seedling"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900">Gymnema Sylvestre</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Widely known as the "sugar destroyer", it helps reduce taste bud receptor response to sweet treats.
+                            </p>
+                        </div>
+
+                        <!-- Ingredient 5 -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-brand-red/50 transition shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-shield-heart"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900">Alpha Lipoic Acid (ALA)</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Powerful universal antioxidant that neutralizes free radicals and supports healthy nerve vascular tissue.
+                            </p>
+                        </div>
+
+                        <!-- Ingredient 6 -->
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 hover:border-brand-red/50 transition shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 bg-rose-100 text-rose-700 rounded-lg flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-spa"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-slate-900">Banaba Leaf Extract</h3>
+                            </div>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Rich in Corosolic Acid, aiding efficient cellular uptake of blood glucose for balanced energy.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Quality Commitment Section -->
+                    <div class="bg-brand-lightbg p-8 sm:p-12 rounded-3xl border border-brand-border">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4">NutraVibe Quality Commitment</h2>
+                                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                                    Every single bottle of GlucoZenith is manufactured following strict industry guidelines inside modern, GMP-certified facilities in the United States. We conduct stringent batch verification tests to ensure total purity, potency, and safety.
+                                </p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+                                        <span class="font-bold text-slate-800 text-sm">Non-GMO & Free from Gluten or Dairy</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+                                        <span class="font-bold text-slate-800 text-sm">No Artificial Flavors, Fillers or Dyes</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fa-solid fa-circle-check text-brand-red text-lg"></i>
+                                        <span class="font-bold text-slate-800 text-sm">3rd-Party Lab Verified for Quality</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="https://taptobuynow.com/glucozenith/" 
+                                   title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="cta-btn-pulse inline-block w-full sm:w-auto px-8 py-4 bg-brand-red hover:bg-brand-darkred text-white text-lg font-black rounded-xl shadow-lg transition">
+                                    Order GlucoZenith Today <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: PRICING & SPECIAL PACKAGES VIEW -->
+        <section id="view-pricing" class="page-view">
+            <div class="py-12 md:py-16 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-red bg-brand-softpink px-3 py-1 rounded-full">SPECIAL DISCOUNT PACKAGES</span>
+                        <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">Select Your GlucoZenith Package</h1>
+                        <p class="text-slate-600 mt-2 text-lg">Choose your supply and unlock exclusive discount pricing with free USA shipping.</p>
+                    </div>
+
+                    <!-- 3 Pricing Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+
+                        <!-- Package 1: 1 Bottle -->
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition flex flex-col justify-between relative">
+                            <div>
+                                <div class="text-center pb-6 border-b border-slate-100">
+                                    <h3 class="text-2xl font-black text-slate-900">1 BOTTLE</h3>
+                                    <p class="text-xs text-slate-500 font-semibold mt-1">30 Day Supply (60 Capsules)</p>
+                                    <div class="my-4">
+                                        <span class="text-4xl font-black text-slate-900">$69</span>
+                                        <span class="text-slate-500 text-sm">/ bottle</span>
+                                    </div>
+                                    <span class="text-xs text-slate-400 line-through">Standard Price $99</span>
+                                </div>
+                                <ul class="py-6 space-y-3 text-xs sm:text-sm text-slate-600">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> 1x GlucoZenith Bottle</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Standard Daily Formula</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> 60-Day Money Back Guarantee</li>
+                                    <li class="flex items-center text-slate-400"><i class="fa-solid fa-minus mr-2"></i> Shipping Fees Apply</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="https://taptobuynow.com/glucozenith/" 
+                                   title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="block text-center w-full py-3.5 rounded-xl text-sm font-extrabold text-brand-red bg-brand-softpink hover:bg-brand-red hover:text-white transition shadow-sm">
+                                    BUY 1 BOTTLE NOW
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Package 2: 6 Bottles (Best Value - Highlighted) -->
+                        <div class="bg-gradient-to-b from-white via-brand-lightbg to-white rounded-3xl p-8 border-2 border-brand-red shadow-2xl hover:shadow-2xl transition flex flex-col justify-between relative transform md:-translate-y-2">
+                            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-red text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow">
+                                ★ BEST VALUE - 180 DAYS
+                            </div>
+
+                            <div>
+                                <div class="text-center pb-6 border-b border-brand-border pt-2">
+                                    <h3 class="text-2xl font-black text-slate-900">6 BOTTLES</h3>
+                                    <p class="text-xs text-brand-darkred font-bold mt-1">180 Day Supply (360 Capsules)</p>
+                                    <div class="my-4">
+                                        <span class="text-5xl font-black text-brand-red">$49</span>
+                                        <span class="text-slate-600 text-sm">/ bottle</span>
+                                    </div>
+                                    <p class="text-xs font-bold text-emerald-600">Total Savings: $300 OFF</p>
+                                </div>
+                                <ul class="py-6 space-y-3 text-xs sm:text-sm text-slate-700 font-medium">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> 6x GlucoZenith Bottles</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-truck-fast text-brand-red mr-2"></i> <strong>FREE USA Shipping</strong></li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Max Value Savings</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-shield text-brand-red mr-2"></i> 60-Day Money Back Guarantee</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="https://taptobuynow.com/glucozenith/" 
+                                   title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="cta-btn-pulse block text-center w-full py-4 rounded-xl text-base font-black text-white bg-gradient-to-r from-brand-red via-brand-darkred to-brand-deepred hover:scale-105 transition shadow-lg">
+                                    CLAIM 6 BOTTLES NOW
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Package 3: 3 Bottles (Most Popular) -->
+                        <div class="bg-white rounded-3xl p-8 border border-brand-border/80 shadow-md hover:shadow-xl transition flex flex-col justify-between relative">
+                            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                MOST POPULAR
+                            </div>
+                            <div>
+                                <div class="text-center pb-6 border-b border-slate-100 pt-2">
+                                    <h3 class="text-2xl font-black text-slate-900">3 BOTTLES</h3>
+                                    <p class="text-xs text-slate-500 font-semibold mt-1">90 Day Supply (180 Capsules)</p>
+                                    <div class="my-4">
+                                        <span class="text-4xl font-black text-slate-900">$59</span>
+                                        <span class="text-slate-500 text-sm">/ bottle</span>
+                                    </div>
+                                    <p class="text-xs font-bold text-emerald-600">Total Savings: $120 OFF</p>
+                                </div>
+                                <ul class="py-6 space-y-3 text-xs sm:text-sm text-slate-600">
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> 3x GlucoZenith Bottles</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-truck-fast text-brand-red mr-2"></i> Free USA Shipping</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Great 90-Day Results</li>
+                                    <li class="flex items-center"><i class="fa-solid fa-check text-emerald-500 mr-2"></i> 60-Day Money Back Guarantee</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="https://taptobuynow.com/glucozenith/" 
+                                   title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                                   target="_blank" 
+                                   rel="noopener" 
+                                   class="block text-center w-full py-3.5 rounded-xl text-sm font-extrabold text-white bg-slate-900 hover:bg-brand-red transition shadow-sm">
+                                    BUY 3 BOTTLES NOW
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 60-Day Guarantee Banner -->
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                        <div class="w-24 h-24 flex-shrink-0 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-4xl shadow-inner">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">100% Satisfaction 60-Day Money Back Guarantee</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                We stand behind GlucoZenith with absolute confidence. If you aren't completely satisfied with your wellness progress within 60 days of purchase, contact customer support for a full purchase price refund.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: FAQ & CONTACT / SUPPORT VIEW -->
+        <section id="view-faq" class="page-view">
+            <div class="py-12 md:py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    <div class="text-center mb-12">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-red bg-brand-softpink px-3 py-1 rounded-full">GOT QUESTIONS?</span>
+                        <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">Frequently Asked Questions</h1>
+                        <p class="text-slate-600 mt-2 text-base">Clear answers regarding GlucoZenith usage, delivery, and guarantees.</p>
+                    </div>
+
+                    <!-- Interactive Accordion list -->
+                    <div class="space-y-4 mb-16">
+
+                        <!-- Q1 -->
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleAccordion('faq-1')" class="w-full text-left p-5 font-bold text-slate-900 bg-slate-50 hover:bg-brand-softpink/40 flex justify-between items-center">
+                                <span>How do I take GlucoZenith?</span>
+                                <i id="faq-1-icon" class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                            </button>
+                            <div id="faq-1" class="hidden p-5 text-sm text-slate-600 border-t border-slate-100 leading-relaxed bg-white">
+                                As indicated on the product bottle: Take 2 capsules daily with a glass of water, preferably right after meals. Consistency is key for achieving optimal metabolic results.
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleAccordion('faq-2')" class="w-full text-left p-5 font-bold text-slate-900 bg-slate-50 hover:bg-brand-softpink/40 flex justify-between items-center">
+                                <span>How long until I notice results?</span>
+                                <i id="faq-2-icon" class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                            </button>
+                            <div id="faq-2" class="hidden p-5 text-sm text-slate-600 border-t border-slate-100 leading-relaxed bg-white">
+                                Individual results may vary. Many users report feeling more steady daily energy within the first 1 to 2 weeks. For complete metabolic support and long-term glucose balance, we recommend taking GlucoZenith consistently for 90 to 180 days.
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleAccordion('faq-3')" class="w-full text-left p-5 font-bold text-slate-900 bg-slate-50 hover:bg-brand-softpink/40 flex justify-between items-center">
+                                <span>Is GlucoZenith safe for daily use?</span>
+                                <i id="faq-3-icon" class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                            </button>
+                            <div id="faq-3" class="hidden p-5 text-sm text-slate-600 border-t border-slate-100 leading-relaxed bg-white">
+                                Yes. GlucoZenith is manufactured using natural, botanical ingredients inside a GMP-certified facility. However, if you are pregnant, nursing, taking prescription medications, or have a medical condition, consult your physician before starting any dietary supplement.
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleAccordion('faq-4')" class="w-full text-left p-5 font-bold text-slate-900 bg-slate-50 hover:bg-brand-softpink/40 flex justify-between items-center">
+                                <span>What if GlucoZenith does not work for me?</span>
+                                <i id="faq-4-icon" class="fa-solid fa-chevron-down text-brand-red transition-transform"></i>
+                            </button>
+                            <div id="faq-4" class="hidden p-5 text-sm text-slate-600 border-t border-slate-100 leading-relaxed bg-white">
+                                Every order comes with our 60-Day 100% Money-Back Guarantee. If you are not satisfied with your experience, simply reach out to customer support to initiate a full refund.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Customer Support Info Card -->
+                    <div class="bg-brand-lightbg p-8 rounded-3xl border border-brand-border text-center mb-12">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Need Direct Customer Support?</h3>
+                        <p class="text-slate-600 text-sm mb-6 max-w-lg mx-auto">
+                            Our dedicated NutraVibe product support team is available to assist you with order inquiries, shipping details, or product questions.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm font-semibold text-slate-800">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-envelope text-brand-red"></i>
+                                <span>support@nutravibe-glucozenith.com</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-clock text-brand-red"></i>
+                                <span>Mon - Fri: 9am - 6pm EST</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Order Call To Action -->
+                    <div class="text-center">
+                        <a href="https://taptobuynow.com/glucozenith/" 
+                           title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                           target="_blank" 
+                           rel="noopener" 
+                           class="cta-btn-pulse inline-block px-10 py-5 bg-gradient-to-r from-brand-red via-brand-darkred to-brand-deepred hover:scale-105 text-white font-black text-xl rounded-2xl shadow-xl transition">
+                            <i class="fa-solid fa-cart-shopping mr-2"></i> Get GlucoZenith Now
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-xl font-black text-white mb-2">Gluco<span class="text-brand-red">Zenith</span></div>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness by NutraVibe.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="switchTab('home')" class="hover:text-white">Home Overview</button></li>
+                        <li><button onclick="switchTab('how')" class="hover:text-white">How It Works</button></li>
+                        <li><button onclick="switchTab('ingredients')" class="hover:text-white">Ingredients</button></li>
+                        <li><button onclick="switchTab('pricing')" class="hover:text-white">Pricing Packages</button></li>
+                        <li><button onclick="switchTab('faq')" class="hover:text-white">FAQ & Contact</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3">Product Specs</h4>
+                    <p class="text-slate-400 mb-1">Quantity: 60 Capsules per Bottle</p>
+                    <p class="text-slate-400 mb-1">Serving Size: 2 Capsules Daily</p>
+                    <p class="text-slate-400">Quality: GMP Certified & Non-GMO</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3">Official Link</h4>
+                    <a href="https://taptobuynow.com/glucozenith/" 
+                       title="GlucoZenith: Blood Sugar Support Supplement Daily Formula for Healthy Glucose Levels and Metabolic Wellness" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="inline-block px-4 py-2 bg-brand-red text-white font-bold rounded hover:bg-brand-darkred transition">
+                        Visit Official Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 text-slate-500 text-[11px] leading-relaxed text-center space-y-3">
+                <p>
+                    * Disclaimer: Statements made on this website have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary per individual. Always consult your healthcare provider prior to starting any supplement regimen.
+                </p>
+                <p>© 2026 GlucoZenith (By NutraVibe). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching logic for 5 pages
+        function switchTab(tabId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Show selected page
+            const activePage = document.getElementById('view-' + tabId);
+            if (activePage) {
+                activePage.classList.add('active');
+            }
+
+            // Reset navigation highlight styles
+            const navButtons = document.querySelectorAll('.nav-link');
+            navButtons.forEach(btn => {
+                btn.classList.remove('text-brand-red', 'bg-brand-softpink');
+                btn.classList.add('text-slate-600');
+            });
+
+            // Highlight current button
+            const currentNav = document.getElementById('nav-' + tabId);
+            if (currentNav) {
+                currentNav.classList.add('text-brand-red', 'bg-brand-softpink');
+                currentNav.classList.remove('text-slate-600');
+            }
+
+            // Scroll smoothly to top on view change
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Accordion toggle for FAQ
+        function toggleAccordion(faqId) {
+            const target = document.getElementById(faqId);
+            const icon = document.getElementById(faqId + '-icon');
+
+            if (target) {
+                target.classList.toggle('hidden');
+                if (icon) {
+                    icon.classList.toggle('rotate-180');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
